@@ -1,0 +1,13 @@
+Select id, name, project_name__c from Salesforce_Project__c
+
+select id, name, Subject__c, Priority__c, status__c, Salesforce_Project__r.name, Salesforce_Project__r.project_name__c from salesforce_ticket__c
+
+select id, name, account.Name from contact
+
+select id, name,(select id, lastname from contacts) from account
+
+select id, name, project_name__c, status__c, (select id, name, subject__c, status__c from salesforce_tickets__r) from salesforce_project__c
+
+select id, name, annualrevenue, type, (select name, amount from opportunities where stageName = 'Closed Won') from account where type = 'Custom - Direct'
+
+
